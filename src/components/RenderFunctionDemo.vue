@@ -1,6 +1,4 @@
 <script>
-import { h, ref } from 'vue'
-
 export default {
   props: {},
   setup(props) {

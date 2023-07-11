@@ -30,6 +30,11 @@ function drawWave() {
   ctx.stroke()
   // ctx.fill()
 }
+
+const isDarkTheme = ref(false)
+function clickHandler() {
+  isDarkTheme.value = !isDarkTheme.value
+}
 </script>
 
 <template>
@@ -54,6 +59,9 @@ function drawWave() {
         <RouterLink :to="{ name: 'courseFive' }">
           CourseFive
         </RouterLink>
+        <RouterLink :to="{ name: 'courseSix' }">
+          CourseSix
+        </RouterLink>
       </nav>
     </div>
   </header>
@@ -61,7 +69,10 @@ function drawWave() {
   <!-- <h1>{{ mode }}</h1> -->
   <!-- <h2> {{ url }} </h2> -->
   <!-- <h3>{{ test }}</h3> -->
-  <RouterView />
+  <RouterView :class="{ darkTerry: isDarkTheme }" class="bg-container" />
+  <button @click="clickHandler">
+    dark
+  </button>
   <!-- <canvas id="myCanvas" width="500" height="500" /> -->
   <!-- <button @click="drawWave">
     Draw Curve
