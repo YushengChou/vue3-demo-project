@@ -12,7 +12,7 @@ export default defineConfig({
   shortcuts: [
     [
       'btn',
-      'px-4 py-1 rounded inline-block bg-teal-700 text-white cursor-pointer hover:bg-teal-800 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50',
+      'px-4 py-1 rounded inline-block bg-#C9D4F1 text-black cursor-pointer hover:bg-#7296F9 hover:text-#fff disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50',
     ],
     [
       'icon-btn',
@@ -20,12 +20,16 @@ export default defineConfig({
     ],
   ],
   theme: {
+    // 預設樣式
     colors: {
-      'primary': '#1677ff',
+      'primary': '#ECF1FF',
       'primary-border': '#1677ff',
       'text': 'rgba(0, 0, 0, 0.88)',
-      'container': '#ffffff',
-      'border': '#d9d9d9',
+      'text-s': '#2C3E50',
+      'container': '#F7F6F4',
+      'border': '#0000ff',
+      'link': '#000026',
+      'link-hover': '#2198D3',
     },
     spacing: {
       xss: '4px',
@@ -53,13 +57,35 @@ export default defineConfig({
     // }),
     presetTheme({
       theme: {
-        darkTerry: {
+        // 修改主題
+        darkTheme: {
           colors: {
-            'primary': '#1668dc',
-            'primary-border': '#1668dc',
-            'border': '#424242',
-            'container': '#141414',
-            'text': 'rgba(255, 255, 255, 0.85)',
+            'primary': '#1c1c1c',
+            'primary-border': '#1c1c1c',
+            'border': '#1f3042',
+            'container': '#676767',
+            'text': '#ffffff',
+            'text-s': '#e0e0e0',
+          },
+        },
+        lightTheme: {
+          colors: {
+            'primary': '#CBF6FF',
+            'primary-border': '#CBF6FF',
+            'border': '#1f3042',
+            'container': '#C2FACF',
+            'text': '#000D70',
+            'text-s': '#007F0C',
+          },
+        },
+        brownTheme: {
+          colors: {
+            'primary': '#E5E3DD',
+            'primary-border': '#E5E3DD',
+            'border': '#1f3042',
+            'container': '#533F42',
+            'text': '#BE9499',
+            'text-s': '#AB8C8D',
           },
         },
         compact: {

@@ -1,51 +1,16 @@
 <script setup>
-import useWindowOpen from '../composable/useWindowOpen'
-import TheWeatherList from '../components/TheWeatherList.vue'
-
-const url = ref('https://google.com.tw')
-const { openNewWindow } = useWindowOpen(url)
-function setUrl() {
-  url.value = 'https://www.facebook.com'
-}
-
-const { openNewWindow: openIGwindow } = useWindowOpen(
-  'https://www.instagram.com/',
-)
+import Navbar from '../components/layout/Navbar.vue'
+import Footer from '../components/layout/Footer.vue'
 </script>
 
 <template>
-  <div class="about w-full">
-    <h1>{{ url }}</h1>
-    <button type="button" @click="openNewWindow">
-      open Window
-    </button>
-    <br>
-    <button type="button" @click="openIGwindow">
-      open instagram window
-    </button>
-    <br>
-    <button type="button" @click="setUrl">
-      Set Url
-    </button>
-    <br>
-    <br>
-    <button type="button" @click="execute">
-      execute Url
-    </button>
-    <Suspense>
-      <TheWeatherList />
-      <template #fallback>
-        <div i-line-md:loading-loop text-50 />
-      </template>
-    </Suspense>
-    <br>
+  <div class="about">
+    <Navbar></Navbar>
+    <div class="h-[calc(100vh-12.5rem)] bg-primary list-none p10 flex flex-justify-around">
+      <p class="text-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente officia, quam mollitia ex iure exercitationem cum, aut quo temporibus, eligendi sunt. Atque magni repudiandae obcaecati doloremque aliquid accusamus ipsam beatae.
+      </p>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-  }
-}
-</style>

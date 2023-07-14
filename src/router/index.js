@@ -10,34 +10,14 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/courseOne',
-      name: 'courseOne',
-      component: () => import('../views/CourseOneView.vue'),
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AboutView.vue'),
     },
     {
-      path: '/courseTwo',
-      name: 'courseTwo',
-      component: () => import('../views/CourseTwoView.vue'),
-    },
-    {
-      path: '/courseThree',
-      name: 'courseThree',
-      component: () => import('../views/CourseThreeView.vue'),
-    },
-    {
-      path: '/courseFour',
-      name: 'courseFour',
-      component: () => import('../views/CourseFourView.vue'),
-    },
-    {
-      path: '/courseFive',
-      name: 'courseFive',
-      component: () => import('../views/CourseFiveView.vue'),
-    },
-    {
-      path: '/courseSix',
-      name: 'courseSix',
-      component: () => import('../views/CourseSixView.vue'),
+      path: '/backstage',
+      name: 'backstage',
+      component: () => import('../views/BackstageView.vue'),
     },
   ],
 })
