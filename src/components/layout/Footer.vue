@@ -1,45 +1,51 @@
 <script setup>
 
+const isRotate = ref(false)
+
+function rotateImg() {
+  isRotate.value = !isRotate.value
+}
+
 </script>
 
 <template>
-  <div class="bg-container h-35 flex flex-justify-between flex-items-center px-10">
-    <div>
-      <ul class="flex list-none space-x-10 p0">
-        <li>
-          <RouterLink to="/about" class="text-text hover:text-link-hover">
-            ABOUT
+  <footer class="bg-container h-50 flex flex-justify-between flex-items-center px-10 md:h-35 overflow-hidden">
+    <div class="w-50%">
+      <ul class="flex flex-wrap list-none p0 md:space-x-10">
+        <li class="w-100% md:w-a">
+          <RouterLink to="/about" class="flex flex-items-center gap2 text-text hover:text-link-hover">
+            <span block i-uiw-qq></span>ABOUT
           </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/" class="text-text hover:text-link-hover">
-            PRODUCT
+        <li class="w-100% md:w-a">
+          <RouterLink to="/product" class="flex flex-items-center gap2 text-text hover:text-link-hover">
+            <span block i-uiw-dislike-o></span>PRODUCT
           </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/" class="text-text hover:text-link-hover">
-            CONTACT
+        <li class="w-100% md:w-a">
+          <RouterLink to="/contact" class="flex flex-items-center gap2 text-text hover:text-link-hover">
+            <span block i-uiw-github></span>CONTACT
           </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/" class="text-text hover:text-link-hover">
-            FAQ
+        <li class="w-100% md:w-a">
+          <RouterLink to="/faq" class="flex flex-items-center gap2 text-text hover:text-link-hover">
+            <span block i-uiw-linux></span>FAQ
           </RouterLink>
         </li>
-        <li>
-          <RouterLink to="/backstage" class="text-text hover:text-link-hover">
-            BACKSTAGE
+        <li class="w-100% md:w-a">
+          <RouterLink to="/backend" class="flex flex-items-center gap2 text-text hover:text-link-hover">
+            <span block i-uiw-like-o></span>BACKEND
           </RouterLink>
         </li>
       </ul>
-      <div class="text-text-s">
-        © 2020-2030 版权所有
+      <div class="text-text-copy">
+        © 2000-2050 版權所有
       </div>
     </div>
     <div>
-      <RouterLink to="/" class="border-1">
-        <img src="https://picsum.photos/100/50?random=1" alt="">
-      </RouterLink>
+      <div @click="rotateImg" :class="isRotate ? 'rotate-360 scale-180' : ''" transition-transform-500
+        bg="urlbg center cover no-repeat" w="25" h="25">
+      </div>
     </div>
-  </div>
+  </footer>
 </template>
