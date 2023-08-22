@@ -131,18 +131,7 @@ export default defineConfig({
             urlbg: "url(https://octodex.github.com/images/adventure-cat.png)",
           },
         },
-        themeTest: {
-          colors: {
-            primary: "#0080FF",
-            "primary-border": "#0080FF",
-            border: "#003060",
-            container: "#0066CC",
-            text: "#66B3FF",
-            "text-copy": "#66B3FF",
-            mask: "#D2E9FF",
-            urlbg: "url(https://octodex.github.com/images/nyantocat.gif)",
-          },
-        },
+        // demo #4389d9 #1b44a6 #4acf40 #ad4917 #D2E9FF https://octodex.github.com/images/nyantocat.gif
         compact: {
           spacing: {
             xss: "2px",

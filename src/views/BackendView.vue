@@ -33,10 +33,6 @@ function changeTheme(val) {
         <label class="text-text">主題色三</label>
         <button class="btn" @click="changeTheme('themeBrown')">咖啡</button>
       </li>
-      <li class="space-x-5 mb-5">
-        <label class="text-text">主題色四</label>
-        <button class="btn" @click="changeTheme('themeTest')">測試</button>
-      </li>
     </ul>
     <Footer></Footer>
   </div>
