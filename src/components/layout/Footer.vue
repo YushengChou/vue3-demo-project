@@ -1,11 +1,9 @@
 <script setup>
-
 const isRotate = ref(false)
 
 function rotateImg() {
   isRotate.value = !isRotate.value
 }
-
 </script>
 
 <template>
@@ -14,27 +12,27 @@ function rotateImg() {
       <ul class="flex flex-wrap list-none p0 md:space-x-10">
         <li class="w-100% md:w-a">
           <RouterLink to="/about" class="flex flex-items-center gap2 text-text hover:text-link-hover">
-            <span block i-uiw-qq></span>ABOUT
+            <i i-uiw-qq />ABOUT
           </RouterLink>
         </li>
         <li class="w-100% md:w-a">
           <RouterLink to="/product" class="flex flex-items-center gap2 text-text hover:text-link-hover">
-            <span block i-uiw-dislike-o></span>PRODUCT
+            <i i-uiw-dislike-o />PRODUCT
           </RouterLink>
         </li>
         <li class="w-100% md:w-a">
           <RouterLink to="/contact" class="flex flex-items-center gap2 text-text hover:text-link-hover">
-            <span block i-uiw-github></span>CONTACT
+            <i i-uiw-github />CONTACT
           </RouterLink>
         </li>
         <li class="w-100% md:w-a">
           <RouterLink to="/faq" class="flex flex-items-center gap2 text-text hover:text-link-hover">
-            <span block i-uiw-linux></span>FAQ
+            <i i-uiw-linux />FAQ
           </RouterLink>
         </li>
         <li class="w-100% md:w-a">
           <RouterLink to="/backend" class="flex flex-items-center gap2 text-text hover:text-link-hover">
-            <span block i-uiw-like-o></span>BACKEND
+            <i i-uiw-like-o />BACKEND
           </RouterLink>
         </li>
       </ul>
@@ -43,9 +41,10 @@ function rotateImg() {
       </div>
     </div>
     <div>
-      <div @click="rotateImg" :class="isRotate ? 'rotate-360 scale-180' : ''" transition-transform-500
-        bg="urlbg center cover no-repeat" w="25" h="25">
-      </div>
+      <div
+        :class="isRotate ? 'rotate-360 scale-180' : ''" transition-transform-500 bg="urlbg center cover no-repeat"
+        w="25" h="25" @click="rotateImg"
+      />
     </div>
   </footer>
 </template>
