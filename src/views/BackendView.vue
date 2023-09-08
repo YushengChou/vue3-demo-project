@@ -1,16 +1,16 @@
 <script setup>
 import { useColorMode } from '@vueuse/core'
+import { ref } from 'vue'
 import Navbar from '../components/layout/Navbar.vue'
 import Footer from '../components/layout/Footer.vue'
 
 const mode = useColorMode()
 
-function revertTheme() {
-  mode.value = ''
-}
 function changeTheme(val) {
   mode.value = val
 }
+
+const testVal = ref('')
 </script>
 
 <template>
@@ -19,7 +19,7 @@ function changeTheme(val) {
     <ul class="backend_list">
       <li class="space-x-5 mb-5">
         <label class="text-text">預設樣式</label>
-        <button class="btn" @click="revertTheme">
+        <button class="btn" @click="changeTheme('')">
           預設
         </button>
       </li>
@@ -40,6 +40,11 @@ function changeTheme(val) {
         <button class="btn" @click="changeTheme('themeBrown')">
           咖啡
         </button>
+      </li>
+      <li>
+        <input type="color" :value="testVal">
+        <input type="color" :value="testVal">
+        <input type="color" :value="testVal">
       </li>
     </ul>
     <Footer />

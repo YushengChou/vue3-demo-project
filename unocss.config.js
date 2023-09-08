@@ -3,8 +3,6 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
-  transformerDirectives,
-  transformerVariantGroup,
 } from 'unocss'
 
 import presetWebFonts from '@unocss/preset-web-fonts'
@@ -34,7 +32,7 @@ export default defineConfig({
     [/^fs-([\d.]+)$/, ([, size]) => ({ 'font-size': `${size}px` })],
     // 文字陰影
     [
-      /^txt-shadow-(\d+)-(\d+)-(\d+)-([\w#]+)$/,
+      /^txt-shadow-(\d.+)-(\d+)-(\d+)-([\w#]+)$/,
       ([, x, y, blur, color]) => ({
         'text-shadow': `${x}px ${y}px ${blur}px ${color}`,
       }),
@@ -132,7 +130,6 @@ export default defineConfig({
             'urlbg': 'url(https://octodex.github.com/images/adventure-cat.png)',
           },
         },
-        // demo #4389d9 #1b44a6 #4acf40 #ad4917 #D2E9FF https://octodex.github.com/images/nyantocat.gif
         compact: {
           spacing: {
             xss: '2px',
@@ -157,6 +154,8 @@ export default defineConfig({
         // 客製化字體
         lobster: 'Lobster',
         aguafina: 'Aguafina Script',
+        monoton: 'Monoton',
+        titan: 'Titan One',
         lato: [
           {
             name: 'Lato',
@@ -171,6 +170,4 @@ export default defineConfig({
       },
     }),
   ],
-  transformers: [transformerDirectives(), transformerVariantGroup()],
-  safelist: 'prose prose-sm m-auto text-left'.split(' '),
 })
